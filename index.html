@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./css/style-html.css">
 </head>
 <body>
@@ -16,16 +17,16 @@
         <!--Навигацыя-->
         <div class="container">
             <nav class="nav">
-                <a class="logo link" href="index.html" lang="en">Web<span class="logo-word-top">Studio</span></a>
+                <a class="logo link animate__heartBeat" href="index.html" lang="en">Web<span class="logo-word-top">Studio</span></a>
                 <ul class="nav-list list">
                     <li class="nav-list-title">
-                        <a class="header-nav-link link" href="index.html"><span class="nav-link-word">Студия</span></a>
+                        <a class="header-nav-link link " href="index.html"><span class="nav-link-word header-nav-page">Студия</span></a>
                     </li>
                     <li class="nav-list-title">
-                        <a class="header-nav-link link" href="portfolio.html">Портфолио</a>
+                        <a class="header-nav-link link " href="portfolio.html">Портфолио</a>
                     </li>
                     <li class="nav-list-title">
-                        <a class="header-nav-link link" href="contakt.html">Контакты</a>
+                        <a class="header-nav-link link " href="contakt.html">Контакты</a>
                     </li>           
                 </ul>
             </nav>
@@ -53,7 +54,7 @@
         <section class="hero-section background-img">
             <div class="container ">
                 <h1 class="hero-section-text">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="hero-section-btn">
+                <button type="button" data-modal-open class="hero-section-btn">
                    <span class="btn-texst">Заказать услугу</span> 
                 </button>
             </div>
@@ -391,5 +392,16 @@
                 </div>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="model">
+                <button type="button" data-modal-close class="btn-close-model">
+                    <svg class="btn-close-icon" width="18" height="18">
+                        <use href="./img/sprite.svg#icon-close-black-btn"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>  
+        <script src="./js/model.js"></script>
+        
 </body>
 </html>

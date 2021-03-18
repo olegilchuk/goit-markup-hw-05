@@ -279,15 +279,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow:hidden;
 }
 
-.price-img-list:hover .price-list-position-text,
-.price-img-list:focus .price-list-position-text
+.price-img-link:hover .price-list-position-text,
+.price-img-link:focus .price-list-position-text
 {
-    background: rgba(33, 150, 243, 0.9);
-    transform: translatex(0);
+    
+    transform: translatey(0);
 
-    transition: background 250ms ;
+
+    transition: transform 250ms ;
 }
 
 .price-list-position-text{
@@ -295,16 +297,20 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.55;
-    Width:370px;
-    Height:294px;
+    Height:100%;
     padding: 63px 24px;
     transform: translatex(100%);
+    overflow: auto;
+    background: rgba(33, 150, 243, 0.9);
 
     color: #FFFFFF;
     position: absolute;
+    transform: translatey(100%);
     
     
 }
+
+
 .price-img-list:hover ,
 .price-img-list:focus{
     border: 1px solid #EEEEEE;
